@@ -3,7 +3,7 @@
 // })
 
 const clickButton = async () => {
-  const url = "https://jsonplaceholder.typicode.com/todos/1";
+  const newurl = "https://jsonplaceholder.typicode.com/todos/1";
 
   //Hàm tách ra lấy URL
   const getTodo = async (url) => {
@@ -22,6 +22,6 @@ const clickButton = async () => {
   //   console.log(data);
 
   //Level 3 Fetch API calls
-  const data = await getTodo(url);
+  const data = await getTodo(newurl);
   console.log(`title: ${data.title}`);
 };
