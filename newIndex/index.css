@@ -10,10 +10,11 @@ body{
 
 .errorMessage {
     position: fixed;
-    width: 50%;
+    /* left: 65%; */
+    width:35%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     border-top: 5px solid #1aff1a;
     border-radius: 2px;
