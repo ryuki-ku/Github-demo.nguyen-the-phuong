@@ -9,6 +9,7 @@ body{
 }
 
 .errorMessage {
+    position: fixed;
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -51,3 +52,7 @@ body{
     font-size: 24px;
 }
 
+.buttons {
+    position: relative;
+    top: 250px;
+}
