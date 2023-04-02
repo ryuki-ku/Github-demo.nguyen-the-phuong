@@ -1,19 +1,33 @@
-function toastButton1({
+function toastButton({
     message = " ",
     type = "",
+    messageClass ="",
     bodyMess = "",
+    color ="",
     duration = 3000,
   }) {
     const main = document.getElementById("Toast1");
     if (main) {
       const toast = document.createElement("div");
-      toast.classList.add("errorMessage1");
+      toast.classList.add(`${messageClass}`);
+      const errorType = {
+        success: "fa-solid fa-check",
+        error: "fa-solid fa-xmark",
+        warning: "fa-solid fa-triangle-exclamation"
+      };
+      const typeColors = {
+        red: "#e91635",
+        yellow: "#fff700",
+        green: "#51ff00"
+      }
+      const selectType = errorType[type];
+      const colorStyle = typeColors[color];
       toast.innerHTML = `
           <div class="message">
               ${message}
           </div>
           <div class="iconMessage">
-          <i class="fa-solid fa-xmark" style="color: #e91635;"></i>
+          <i class="${selectType}" style="color: ${colorStyle};"></i>
           </div>
           <div class="bodyMessage">
               ${bodyMess}
@@ -22,80 +36,38 @@ function toastButton1({
     }
   }
   
-  function toastButton2({
-    message = " ",
-    type = "",
-    bodyMess = "",
-    duration = 3000,
-  }) {
-    const main = document.getElementById("Toast2");
-    if (main) {
-      const toast = document.createElement("div");
-      toast.classList.add("errorMessage2");
-      toast.innerHTML = `
-          <div class="message">
-            ${message}
-          </div>
-          <div class="iconMessage">
-        <i class="fa-solid fa-circle-check"></i>
-          </div>
-          <div class="bodyMessage">
-            ${bodyMess}
-          </div>`;
-      main.appendChild(toast);
-    }
-  }
-  
-  function toastButton3({
-    message = " ",
-    type = "",
-    bodyMess = "",
-    duration = 3000,
-  }) {
-    const main = document.getElementById("Toast3");
-    if (main) {
-      const toast = document.createElement("div");
-      toast.classList.add("errorMessage3");
-      toast.innerHTML = `
-          <div class="message">
-            ${message}
-          </div>
-          <div class="iconMessage">
-          <i class="fa-solid fa-triangle-exclamation" style="color: #d0fa00;"></i>
-          </div>
-          <div class="bodyMessage">
-            ${bodyMess}
-          </div>`;
-      main.appendChild(toast);
-    }
-  }
-  
   function showError() {
-    toastButton1({
+    toastButton({
       message:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex laudantium minus quos hic dolorum suscipit rem, iusto, alias debitis animi obcaecati. Optio nulla nostrum vel sed, debitis consequuntur odit libero?",
       type: "error",
+      messageClass: "errorMessage1",
       bodyMess: "Somthing Went wrong",
+      color: "red",
       duration: 3000,
     });
   }
   
   function showSuccess() {
-    toastButton2({
+    toastButton({
       message:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex laudantium minus quos hic dolorum suscipit rem, iusto, alias debitis animi obcaecati. Optio nulla nostrum vel sed, debitis consequuntur odit libero?",
-      type: "Success",
+      type: "success",
+      messageClass: "errorMessage2",
       bodyMess: "Successfull",
+      color: "green",
       duration: 3000,
     });
   }
   
   function showWarning() {
-    toastButton3({
+    toastButton({
       message:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex laudantium minus quos hic dolorum suscipit rem, iusto, alias debitis animi obcaecati. Optio nulla nostrum vel sed, debitis consequuntur odit libero?",
-      type: "Warning",
+      type: "warning",
+      messageClass: "errorMessage3",
       bodyMess: "Look for something??",
+      color: "yellow",
       duration: 3000,
     });
   }
