@@ -9,7 +9,7 @@ body{
 }
 
 .errorMessage1 {
-    position: fixed;
+    position: absolute;
     left: 0;
     width:30%;
     display: flex;
@@ -24,8 +24,8 @@ body{
 }
 
 .errorMessage2 {
-    position: fixed;
-    /* left: 65%; */
+    position: absolute;
+    left: 35%;
     width:31%;
     display: flex;
     flex-direction: column;
@@ -39,7 +39,7 @@ body{
 }
 
 .errorMessage3 {
-    position: fixed;
+    position: absolute;
     left: 69.5%;
     width:30%;
     display: flex;
@@ -94,7 +94,9 @@ body{
     border-radius: 7px;
     border: 2px solid white;
     background-color: #e13314;
-    color: white
+    color: white;
+    position: inherit;
+    left: 0;
 }
 
 .bnt2{
@@ -102,9 +104,9 @@ body{
     height: 50px;
     border-radius: 7px;
     border: 2px solid white;
-    background-color: #1aff1a;
-    margin-left: 400px;
-    margin-right: 370px;
+    background-color: #01ff01;
+    /* margin-left: 400px;
+    margin-right: 370px; */
     color: white
 }
 
@@ -119,4 +121,10 @@ body{
 
 .bnt1:hover, .bnt2:hover ,.bnt3:hover{
     opacity: 0.5;
+}
+
+@media (max-width: 600px) {
+    .buttons {
+        top: 340px;
+    }
 }
