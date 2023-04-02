@@ -4,7 +4,7 @@ function toastButton({
     messageClass ="",
     bodyMess = "",
     color ="",
-    duration = 3000,
+    duration = 1000,
   }) {
     const main = document.getElementById("Toast1");
     if (main) {
@@ -33,6 +33,10 @@ function toastButton({
               ${bodyMess}
           </div>`;
       main.appendChild(toast);
+
+      setTimeout(() => {
+        main.removeChild(toast);
+      }, duration);
     }
   }
   
@@ -44,7 +48,7 @@ function toastButton({
       messageClass: "errorMessage1",
       bodyMess: "Somthing Went wrong",
       color: "red",
-      duration: 3000,
+      duration: 1500,
     });
   }
   
@@ -56,7 +60,7 @@ function toastButton({
       messageClass: "errorMessage2",
       bodyMess: "Successfull",
       color: "green",
-      duration: 3000,
+      duration: 1500,
     });
   }
   
@@ -68,6 +72,6 @@ function toastButton({
       messageClass: "errorMessage3",
       bodyMess: "Look for something??",
       color: "yellow",
-      duration: 3000,
+      duration: 1500,
     });
   }
