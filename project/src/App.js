@@ -28,21 +28,21 @@ const lessons = [
 function App() {
   const [lessonID, setLessonID] = useState(1);
 
-  useEffect(() => {
+  // useEffect(() => {
 
-    const handleComment = (e) => {
-      console.log(e);
-    }
+  //   const handleComment = (e) => {
+  //     console.log(e);
+  //   }
 
-    window.addEventListener('lesson-1', handleComment)
-  }, [])
+  //   window.addEventListener('lesson-1', handleComment)
+  // }, [])
 
   return (
     <div style={{padding: 20}}>
       <ul>
         {lessons.map(lesson => (
           <li
-            key={lesson.id}
+            key={lesson.id} //Truyền key vào nếu ko lỗi
             style={{
               color: lessonID === lesson.id ? 'red' : '#333'
             }}
