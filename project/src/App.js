@@ -42,7 +42,8 @@ function App() {
       <ul>
         {lessons.map(lesson => (
           <li
-            key={lesson.id} //Truyền key vào nếu ko lỗi
+          //Truyền key vào nếu ko lỗi
+          key={lesson.id} 
             style={{
               color: lessonID === lesson.id ? 'red' : '#333'
             }}
