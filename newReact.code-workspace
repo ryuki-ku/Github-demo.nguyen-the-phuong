@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../Music Player"
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true,
+		"liveServer.settings.multiRootWorkspaceName": "Music Player"
+	}
+}

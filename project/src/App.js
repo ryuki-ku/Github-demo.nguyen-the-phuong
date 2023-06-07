@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import {useState, useEffect} from "react";
+import {useState, useEffect, useReducer} from "react";
 
 //useReducer
 //1. initState = 0
@@ -8,52 +8,11 @@ import {useState, useEffect} from "react";
 //3. Reducer
 //4. Dispatch
 
-const lessons = [
-  {
-    id: 1,
-    name: 'ReactJS'
-  },
-
-  {
-    id: 2,
-    name: 'SPA/MPA la gi?'
-  },
-
-  {
-    id: 3,
-    name: 'Arrow Function'
-  }
-]
-
 function App() {
-  const [lessonID, setLessonID] = useState(1);
-
-  // useEffect(() => {
-
-  //   const handleComment = (e) => {
-  //     console.log(e);
-  //   }
-
-  //   window.addEventListener('lesson-1', handleComment)
-  // }, [])
-
   return (
-    <div style={{padding: 20}}>
-      <ul>
-        {lessons.map(lesson => (
-          <li
-          //Truyền key vào nếu ko lỗi
-          key={lesson.id} 
-            style={{
-              color: lessonID === lesson.id ? 'red' : '#333'
-            }}
-            onClick={() => setLessonID(lesson.id)}
-          >
-            {lesson.name}
-          </li>
-        ))}
-      </ul>
-    </div>
+    <>
+    
+    </>
   )
 }
 
